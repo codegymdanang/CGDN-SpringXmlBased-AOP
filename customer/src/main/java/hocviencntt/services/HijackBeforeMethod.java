@@ -11,6 +11,6 @@ public class HijackBeforeMethod implements MethodBeforeAdvice {
 
 
     public void before(Method method, Object[] objects, Object o) throws Throwable {
-        System.out.println("AAA");
+        System.out.println("Do something before method is called");
     }
 }

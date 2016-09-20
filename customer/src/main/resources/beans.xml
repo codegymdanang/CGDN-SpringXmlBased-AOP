@@ -9,12 +9,13 @@
     </bean>
 
     <bean id="hijackBeforMethodBean" class="hocviencntt.services.HijackBeforeMethod" />
+    <bean id="hijackAfterMethodBean" class="hocviencntt.services.HijackAfterMethod" />
 
     <bean id="customerServiceProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
         <property name="target" ref="customerService" />
         <property name="interceptorNames">
             <list>
-                <value>hijackBeforMethodBean</value>
+                <value>hijackAfterMethodBean</value>
             </list>
         </property>
 
